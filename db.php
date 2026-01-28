@@ -2,7 +2,7 @@
 
   $db_name = "moviestar";
   $db_host = "localhost";
-  $db_user = "roo";
+  $db_user = "root";
   $db_pass = "";
 
   try{
