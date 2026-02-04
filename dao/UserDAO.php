@@ -84,7 +84,8 @@ class UserDAO implements UserDAOInterface {
     
         if($redirect) {
             // Redireciona para o perfil do usuario
-            header("Location :" . $this->$url . "editprofile.php");
+            header("Location: " . $this->$url . "editprofile.php");
+            exit;
         }
     }
 
