@@ -45,16 +45,16 @@
       <input type="text" name="q" id="search" placeholder="Buscar Filmes" aria-label="Search">
       <button type="submit"><i class="bi bi-search"></i></button>
     </form> <!--vericação de usuario -->
-    <?php if(isset($_SESSION["usario_logado"])): ?> <!--usando variavel if para verificar a existência de cadastro de usuário--> 
+    <?php if($userData): ?> <!--usando variavel if para verificar a existência de cadastro de usuário--> 
     <ul class="navbar-nav">
       <li class="nav-item">
         <a href="<? $BASE_URL ?>newmovie.php" class="nav-link"><i class="bi bi-plus-square"></i>Incluir Filme</a>
       </li>
       <li class="nav-item">
-        <a href="html" class="nav-link">Meus Filmes</a>
+        <a href="<? $BASE_URL ?>dashboard.php" class="nav-link">Meus Filmes</a>
       </li>
       <li class="nav-item">
-        <a href="#" class="nav-link bold">name</a>
+        <a href="<? $BASE_URL ?>editprofile.php" class="nav-link bold"><?= $userData->nome?></a>
       </li>
       <li class="nav-item">
         <a href="<? $BASE_URL ?>logout.php" class="nav-link">Sair</a>
@@ -63,6 +63,7 @@
       <li class="nav-item">
         <a href="<? $BASE_URL ?>auth.php" class="nav-link">Entrar / Cadastrar</a>
       </li>
+      <?php endif; ?>
     </ul>
   </nav>
   
