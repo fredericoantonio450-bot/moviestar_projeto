@@ -45,6 +45,7 @@
       <input type="text" name="q" id="search" placeholder="Buscar Filmes" aria-label="Search">
       <button type="submit"><i class="bi bi-search"></i></button>
     </form> <!--vericação de usuario -->
+    <?php if(isset($_SESSION[""])): ?> <!--usando variavel if para verificar a existência de cadastro de usuário--> 
     <ul class="navbar-nav">
       <li class="nav-item">
         <a href="newmovie.html" class="nav-link"><i class="bi bi-plus-square"></i>Incluir Filme</a>
@@ -58,6 +59,7 @@
       <li class="nav-item">
         <a href="#" class="nav-link">Sair</a>
       </li>
+         <?php else: ?>
       <li class="nav-item">
         <!-- <a href="auth.php" class="nav-link">Entrar / Cadastrar</a> -->
       </li>
